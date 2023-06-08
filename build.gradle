@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+apply plugin: 'jacoco'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //TestNG
+    testImplementation 'org.testng:testng:7.7.0'
+
+    //REST ASSURED
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.0'
+
+    //LOG4J
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.19.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.19.0'
+
+    //LOMBOK
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.26'
+}
+
+
+test {
+    useTestNG {
+        useTestNG {
+            useDefaultListeners = true
+        }
+        testLogging {
+            events "passed", "skipped", "failed"
+        }
+    }
+}
