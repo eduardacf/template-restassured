@@ -1,5 +1,6 @@
 package br.eduardacf.template.utils;
 
+import static br.eduardacf.template.constants.Gerais.CAMINHO_PROPRIEDADES;
 import static java.nio.file.Files.newInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,10 +16,8 @@ public class FileReader {
 
   public static InputStream readFile() {
     InputStream input = null;
-
-    String path = "src/main/resources/application.properties";
     try {
-      input = newInputStream(Path.of(path));
+      input = newInputStream(Path.of(CAMINHO_PROPRIEDADES));
     } catch (IOException e) {
       LOGGER.error("File not found", e);
     }

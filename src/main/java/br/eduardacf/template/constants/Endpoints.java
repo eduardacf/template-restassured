@@ -4,7 +4,6 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class MainStaticValues {
-
-  public static final String TEST = "/test";
+public class Endpoints {
+    public static final String TEST = "/test";
 }
