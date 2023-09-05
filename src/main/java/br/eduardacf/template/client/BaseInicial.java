@@ -1,7 +1,7 @@
 package br.eduardacf.template.client;
 
 import io.restassured.specification.RequestSpecification;
-import static br.eduardacf.template.spec.ServerRestSpecification.getRequestSpecification;
+import static br.eduardacf.template.spec.ServerSpecification.getRequestSpecification;
 
 public abstract class BaseInicial {
     private final RequestSpecification spec = getRequestSpecification();

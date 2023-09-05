@@ -13,7 +13,7 @@ import static io.restassured.config.LogConfig.logConfig;
 import static io.restassured.filter.log.LogDetail.ALL;
 import static io.restassured.http.ContentType.JSON;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class ServerRestSpecification {
+public class ServerSpecification {
     private static RequestSpecBuilder requestSpecBuilder() {
         return new RequestSpecBuilder().setConfig(new RestAssuredConfig()
                         .sslConfig(new SSLConfig()

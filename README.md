@@ -1,11 +1,9 @@
-## Exemplo de template _para_ **automação de testes API** utilizando Rest-Assured
-
-*   Projeto criado para servir como template para demais projetos de testes de API.
+![template-capa.jpg](img-readme%2Ftemplate-capa.jpg)
 
 ### Pré-requisitos instalados na máquina:
 
-*  java8 ou maior
-*  gradle
+*  Java **(preferencialmente >= versão 11)**
+*  Gradle **(preferencialmente >= versão 7.5.1)**
 
 ### Tecnologias utilizadas
 
