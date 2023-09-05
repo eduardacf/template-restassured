@@ -1,4 +1,4 @@
-![template-capa.jpg](img-readme%2Ftemplate-capa.jpg)
+![capa.jpg](img-readme%2Fcapa.jpg)
 
 ### Pré-requisitos instalados na máquina:
 
