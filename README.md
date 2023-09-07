@@ -21,7 +21,7 @@ Template Rest Assured
 
 <details><summary>[PASSO 1]</summary>
 
-![passo1_Easy-Resize.com.jpg](img-readme%2Fpasso1_Easy-Resize.com.jpg)
+![passo1.png](img-readme%2Fpasso1.png)
 </details>
 
 <details><summary>[PASSO 2]</summary>
