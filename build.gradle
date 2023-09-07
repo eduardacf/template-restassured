@@ -26,12 +26,19 @@ dependencies {
 
 
 test {
+    useJUnitPlatform()
     useTestNG {
+        //Log para identificar qual ambiente está sendo executado 1 ou 2 - o ambiente (env) default será o ambiente-1
+        println "============ Utilizando": System.getProperty("env", "ambiente-1") + " ============ "
+        //Busca a variavel ENV - caso não encontre seta default como ambiente-1
+        systemProperty "env", findProperty("env") ?: "ambiente-1"
         useTestNG {
             useDefaultListeners = true
         }
-        testLogging {
-            events "passed", "skipped", "failed"
-        }
+    }
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
     }
 }
