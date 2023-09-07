@@ -4,6 +4,8 @@ import br.eduardacf.template.dto.LoginRequestDTO;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import static br.eduardacf.template.constants.Gerais.*;
+
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class LoginFactory {
 
@@ -16,10 +18,10 @@ public class LoginFactory {
     }
 
     public static LoginRequestDTO buildLoginComSucesso() {
-        return buildLoginDTO("kminchelle", "0lelplR");
+        return buildLoginDTO(USERNAME_VALIDO, SENHA_VALIDA);
     }
 
     public static LoginRequestDTO buildLoginInvalido() {
-        return buildLoginDTO("kminchelle", "0lelplXXXXXXXXX");
+        return buildLoginDTO(USERNAME_VALIDO, SENHA_INVALIDA);
     }
 }
