@@ -42,5 +42,11 @@ Template Rest Assured
 ### Como executar:
 
 ```plaintext
-gradle clean build test
+gradle clean build test | EXECUTA DEFAULT NO AMBIENTE-1
+```
+```plaintext
+gradle clean build test env=ambiente-1| EXECUTA NO AMBIENTE-1
+```
+```plaintext
+gradle clean build test env=ambiente-2| EXECUTA NO AMBIENTE-2
 ```
