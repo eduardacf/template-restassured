@@ -17,9 +17,9 @@ Configurar ambientes:
 
 * Esse template conta com a _configuração_ de rodar em **ambientes distintos** (diversos ambientes diferentes)
 * Configuramos _nossa_ **env** com o nome de **ambiente-1** e **ambiente-2**
-![passo1.png](img-readme%2Fpasso1.png)
-![passo2.png](img-readme%2Fpasso2.png)
-* ![passo3.png](img-readme%2Fpasso3.png)
+![passo1_Easy-Resize.com.jpg](img-readme%2Fpasso1_Easy-Resize.com.jpg)
+![passo2_Easy-Resize.com.jpg](img-readme%2Fpasso2_Easy-Resize.com.jpg)
+![passo3_Easy-Resize.com.jpg](img-readme%2Fpasso3_Easy-Resize.com.jpg)
 * #### Executando via IDE:
     * Para executar o teste local via **IDE** basta dar o play direto **(botão verde)** - irá pegar o **ambiente-1** _default_
       deseje alterar o ambiente de execução basta ir em: `Run > Edit Configurations > Edit configuration templates` e adicionar a configuração de sua **preferência**.
