@@ -2,8 +2,7 @@ package br.eduardacf.template.funcional;
 
 import br.eduardacf.template.client.BaseInicial;
 import br.eduardacf.template.dto.LoginResponseDTO;
-import br.eduardacf.template.factory.LoginFactory;
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
 import static br.eduardacf.template.constants.Gerais.*;
