@@ -2,8 +2,8 @@
 
 ### 📌 Pré-requisitos instalados na máquina:
 
-* Java **(preferencialmente >= versão 11)**
-* Gradle **(preferencialmente >= versão 7.5.1)**
+* Java **(preferencialmente ≥ versão 11)**
+* Gradle **(preferencialmente ≥ versão 7.5.1)**
 
 ### 🔧 Tecnologias utilizadas
 
@@ -15,7 +15,7 @@
 
 ## ⚙️ Configuração ambientes:
 
-* Esse template conta com a _configuração_ de rodar em **ambientes distintos** (diversos ambientes diferentes)
+* Esse modelo conta com a _configuração_ de rodar em **ambientes distintos** (diversos ambientes diferentes)
 * Configuramos _nossa_ **env** com o nome de **ambiente-1** e **ambiente-2**
 
 <details><summary>[PASSO 1]</summary>
@@ -26,13 +26,13 @@
 
 <details><summary>[PASSO 2]</summary>
 
-![passo2_Easy-Resize.com.jpg](img-readme%2Fpasso2_Easy-Resize.com.jpg)
+![passo2.jpg](img-readme%2Fpasso2.jpg)
 
   </details>
   
   <details><summary>[PASSO 3]</summary>
   
-  ![passo3_Easy-Resize.com.jpg](img-readme%2Fpasso3_Easy-Resize.com.jpg)
+  ![passo3.jpg](img-readme%2Fpasso3.jpg)
   
   </details>
 
