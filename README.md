@@ -1,11 +1,11 @@
-Template Rest Assured
+# Template Rest Assured
 
-### Pré-requisitos instalados na máquina:
+### 📌 Pré-requisitos instalados na máquina:
 
 * Java **(preferencialmente >= versão 11)**
 * Gradle **(preferencialmente >= versão 7.5.1)**
 
-### Tecnologias utilizadas
+### 🔧 Tecnologias utilizadas
 
 * [Java](https://www.java.com/pt-BR/)
 * [Rest-Assured](https://mvnrepository.com/artifact/io.rest-assured/rest-assured)
@@ -13,7 +13,7 @@ Template Rest Assured
 * [Lombok](https://mvnrepository.com/artifact/org.projectlombok/lombok)
 * [Log4j](https://logging.apache.org/log4j/2.x/)
 
-## Configurar ambientes:
+## ⚙️ Configuração ambientes:
 
 * Esse template conta com a _configuração_ de rodar em **ambientes distintos** (diversos ambientes diferentes)
 * Configuramos _nossa_ **env** com o nome de **ambiente-1** e **ambiente-2**
@@ -28,31 +28,25 @@ Template Rest Assured
 
 ![passo2_Easy-Resize.com.jpg](img-readme%2Fpasso2_Easy-Resize.com.jpg)
 
-</details>
+  </details>
+  
+  <details><summary>[PASSO 3]</summary>
+  
+  ![passo3_Easy-Resize.com.jpg](img-readme%2Fpasso3_Easy-Resize.com.jpg)
+  
+  </details>
 
-<details><summary>[PASSO 3]</summary>
+### 🏎️ Executando via IDE:
 
-![passo3_Easy-Resize.com.jpg](img-readme%2Fpasso3_Easy-Resize.com.jpg)
+ * Para executar o teste local via **IDE** basta dar o play direto **(botão verde)** - irá pegar o **ambiente-1** _default_
+   deseje alterar o ambiente de execução basta ir em: `Run > Edit Configurations > Edit configuration templates` e adicionar a configuração de sua **preferência**.
 
-</details>
-
-### Executando via IDE:
-
-* Para executar o teste local via **IDE** basta dar o play direto **(botão verde)** - irá pegar o **ambiente-1** _default_
-  deseje alterar o ambiente de execução basta ir em: `Run > Edit Configurations > Edit configuration templates` e adicionar a configuração de sua **preferência**.
-
-### Como executar:
-
-gradle clean build test
-
-
-
-
-
-|             COMANDO                    | EXECUÇÃO                                             |
-|:---------------------------------------|:-----------------------------------------------------|
-| `gradle clean build test`                | **EXECUTA NO AMBIENTE-1** **~~(DEFAULT)~~**                  |
-| `gradle clean build test env=ambiente-1` | **EXECUTA NO AMBIENTE-1**                                |
-| `gradle clean build test env=ambiente-2` | **EXECUTA NO AMBIENTE-2**                                |
-
+### ✈️ Executando via terminal:
+ 
+ |             COMANDO                    | EXECUÇÃO                                             |
+ |:---------------------------------------|:-----------------------------------------------------|
+ | `gradle clean build test`                | **EXECUTA NO AMBIENTE-1** **~~(DEFAULT)~~**                  |
+ | `gradle clean build test env=ambiente-1` | **EXECUTA NO AMBIENTE-1**                                |
+ | `gradle clean build test env=ambiente-2` | **EXECUTA NO AMBIENTE-2**                                |
+ 
 
