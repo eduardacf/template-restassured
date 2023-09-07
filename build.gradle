@@ -16,7 +16,6 @@ dependencies {
 
     //REST ASSURED
     implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.1'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.7.1'
 
     //LOG4J
     implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.19.0'
