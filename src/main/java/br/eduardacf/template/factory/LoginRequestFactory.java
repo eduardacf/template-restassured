@@ -1,13 +1,13 @@
 package br.eduardacf.template.factory;
 
-import br.eduardacf.template.dto.LoginRequestDTO;
+import br.eduardacf.template.dto.request.LoginRequestDTO;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-import static br.eduardacf.template.constants.Gerais.*;
+import static br.eduardacf.template.constants.auth.Auth.*;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class LoginFactory {
+public class LoginRequestFactory {
 
     public static LoginRequestDTO buildLoginDTO(String username, String password) {
         return LoginRequestDTO

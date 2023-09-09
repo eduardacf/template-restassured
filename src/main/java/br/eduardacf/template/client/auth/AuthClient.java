@@ -1,6 +1,6 @@
-package br.eduardacf.template.client;
+package br.eduardacf.template.client.auth;
 
-import br.eduardacf.template.dto.LoginRequestDTO;
+import br.eduardacf.template.dto.request.LoginRequestDTO;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
