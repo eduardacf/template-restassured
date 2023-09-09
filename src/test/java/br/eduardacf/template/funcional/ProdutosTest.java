@@ -6,15 +6,18 @@ import org.testng.annotations.Test;
 import static br.eduardacf.template.constants.Gerais.*;
 import static br.eduardacf.template.constants.Mensagens.MESSAGE;
 import static br.eduardacf.template.constants.Mensagens.MSG_PRODUTO_NAO_ENCONTRADO;
+import static br.eduardacf.template.factory.TituloRequestFactory.buildTituloAdicionadoComSucesso;
+import static br.eduardacf.template.factory.TituloRequestFactory.buildTituloAlteradoComSucesso;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class ProdutosTest extends BaseInicial {
 
     @Test
     public void sucessoAoBuscarProdutoComIdValido() {
-        String title = produtosClient.getBuscarUnicoProduto(ID_1)
+        String title = produtosClient.buscarUnicoProduto(ID_1)
                 .statusCode(SC_OK)
                 .extract()
                 .jsonPath()
@@ -24,11 +27,40 @@ public class ProdutosTest extends BaseInicial {
 
     @Test
     public void falhaAoBuscarProdutoComIdInvalido() {
-        String message = produtosClient.getBuscarUnicoProduto(ID_INVALIDO)
+        String message = produtosClient.buscarUnicoProduto(ID_INVALIDO)
                 .statusCode(SC_NOT_FOUND)
                 .extract()
                 .jsonPath()
                 .get(MESSAGE);
         assertEquals(message, MSG_PRODUTO_NAO_ENCONTRADO);
+    }
+
+    @Test
+    public void sucessoAoAdicionarProduto() {
+        int id = produtosClient.adicionaProduto(buildTituloAdicionadoComSucesso())
+                .statusCode(SC_OK)
+                .extract()
+                .jsonPath()
+                .get("id");
+        assertEquals(id, 101);
+    }
+
+    @Test
+    public void sucessoAoAlterarProduto() {
+        String title = produtosClient.alteraProduto("1",buildTituloAlteradoComSucesso())
+                .statusCode(SC_OK)
+                .extract()
+                .jsonPath()
+                .get("title");
+        assertEquals(title, "Titulo ALTERADO!!!");
+    }
+    @Test
+    public void sucessoAoDeletarProduto() {
+        boolean isDeleted = produtosClient.deletaProduto("1")
+                .statusCode(SC_OK)
+                .extract()
+                .jsonPath()
+                .get("isDeleted");
+        assertTrue(isDeleted);
     }
 }

@@ -1,6 +1,7 @@
 package br.eduardacf.template.client;
 
 import br.eduardacf.template.client.auth.AuthClient;
+import br.eduardacf.template.client.produtos.ProdutosClient;
 import io.restassured.specification.RequestSpecification;
 import static br.eduardacf.template.spec.ServerSpecification.getRequestSpecification;
 

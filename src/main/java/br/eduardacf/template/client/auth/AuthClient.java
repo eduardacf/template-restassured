@@ -16,7 +16,7 @@ public class AuthClient {
         this.requestSpec = specification;
     }
 
-    public ValidatableResponse postLogin(LoginRequestDTO loginRequestDTO) {
+    public ValidatableResponse realizaLogin(LoginRequestDTO loginRequestDTO) {
         return given()
                 .accept(ContentType.JSON)
                 .spec(requestSpec)

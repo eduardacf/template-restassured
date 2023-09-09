@@ -20,7 +20,7 @@ import static org.testng.AssertJUnit.assertNotNull;
 public class AuthTest extends BaseInicial {
     @Test
     public void sucessoAoFazerLogin() {
-        LoginResponseDTO loginResponseDTO = authClient.postLogin(buildLoginComSucesso())
+        LoginResponseDTO loginResponseDTO = authClient.realizaLogin(buildLoginComSucesso())
                 .statusCode(SC_OK)
                 .extract()
                 .as(LoginResponseDTO.class);
@@ -33,7 +33,7 @@ public class AuthTest extends BaseInicial {
 
     @Test
     public void falhaAoFazerLogin() {
-        String message = authClient.postLogin(buildLoginInvalido())
+        String message = authClient.realizaLogin(buildLoginInvalido())
                 .statusCode(SC_BAD_REQUEST)
                 .extract()
                 .jsonPath()

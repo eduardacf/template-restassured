@@ -11,7 +11,7 @@ import static org.apache.http.HttpStatus.SC_OK;
 public class ProdutoContratoTest extends BaseInicial {
     @Test
     public void sucessoAoRetornarContratoSchemaBuscarUnicoProdutoPorId() {
-        produtosClient.getBuscarUnicoProduto("1")
+        produtosClient.buscarUnicoProduto("1")
                 .statusCode(SC_OK)
                 .body(matchesJsonSchema(new File("src/main/resources/contratos-json/contrato_getProdutoId.json")));
     }

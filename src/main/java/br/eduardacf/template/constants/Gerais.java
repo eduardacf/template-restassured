@@ -13,4 +13,6 @@ public class Gerais {
     public static final String IPHONE_9 = "iPhone 9";
     public static final String TITLE = "title";
     public static final String ID_1 = "1";
+    public static final String ID_PRODUTO = "idProduto";
+
 }

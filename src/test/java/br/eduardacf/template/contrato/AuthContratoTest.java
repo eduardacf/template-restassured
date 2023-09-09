@@ -14,7 +14,7 @@ import static org.testng.AssertJUnit.assertNotNull;
 public class AuthContratoTest extends BaseInicial {
     @Test
     public void sucessoAoRetornarContratoSchemaAuthFazerLogin() {
-        authClient.postLogin(buildLoginComSucesso())
+        authClient.realizaLogin(buildLoginComSucesso())
                 .statusCode(SC_OK)
                 .body(matchesJsonSchema(new File("src/main/resources/contratos-json/contrato_postAuth.json")));
     }
