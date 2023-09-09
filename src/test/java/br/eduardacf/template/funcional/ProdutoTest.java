@@ -13,10 +13,12 @@ import static org.apache.http.HttpStatus.SC_OK;
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
-public class ProdutosTest extends BaseInicial {
+public class ProdutoTest extends BaseInicial {
+
+
 
     @Test
-    public void sucessoAoBuscarProdutoComIdValido() {
+    public void sucessoAoBuscarProduto() {
         String title = produtosClient.buscarUnicoProduto(ID_1)
                 .statusCode(SC_OK)
                 .extract()
@@ -41,7 +43,7 @@ public class ProdutosTest extends BaseInicial {
                 .statusCode(SC_OK)
                 .extract()
                 .jsonPath()
-                .get("id");
+                .get(ID);
         assertEquals(id, 101);
     }
 
@@ -51,16 +53,16 @@ public class ProdutosTest extends BaseInicial {
                 .statusCode(SC_OK)
                 .extract()
                 .jsonPath()
-                .get("title");
-        assertEquals(title, "Titulo ALTERADO!!!");
+                .get(TITLE);
+        assertEquals(title, TITULO_ALTERADO);
     }
     @Test
     public void sucessoAoDeletarProduto() {
-        boolean isDeleted = produtosClient.deletaProduto("1")
+        boolean isDeleted = produtosClient.deletaProduto(String.valueOf(1))
                 .statusCode(SC_OK)
                 .extract()
                 .jsonPath()
-                .get("isDeleted");
+                .get(IS_DELETED);
         assertTrue(isDeleted);
     }
 }
