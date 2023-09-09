@@ -22,5 +22,4 @@ public class AuthContratoTest extends BaseInicial {
                 .statusCode(SC_OK)
                 .body(matchesJsonSchema(new File("src/main/resources/contratos-json/contrato_postAuth.json")));
     }
-
 }
