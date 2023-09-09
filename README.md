@@ -57,3 +57,8 @@
 
 </details>
 
+### 🥳 Recursos úteis utilizados:
+
+* Conversão Json para DTO java: https://json2csharp.com/code-converters/json-to-pojo
+* Gerador de JsonSchema: https://jsonschema.net/app/schemas/343660
+* API Usada para os testes: https://dummyjson.com/docs
