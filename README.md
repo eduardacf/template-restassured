@@ -48,12 +48,12 @@
  | `gradle clean build test`                | **EXECUTA NO AMBIENTE-1** **~~(DEFAULT)~~**                  |
  | `gradle clean build test env=ambiente-1` | **EXECUTA NO AMBIENTE-1**                                |
  | `gradle clean build test env=ambiente-2` | **EXECUTA NO AMBIENTE-2**                                |
- 
-Cenários de testes:
 
-  <details><summary>[🌟 TESTES 🌟]</summary>
+### 🌏 Cenários de testes:
+
+<details><summary>[TESTES]</summary>
 
 ![testes.png](img-readme%2Ftestes.png)
 
-  </details>
+</details>
 
