@@ -11,26 +11,22 @@ permissions:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
-      - run: npm ci
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          run_install: true
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: pnpm
-
-      - name: healthCheck
-        run: gradle clean build test
+    - uses: actions/checkout@v2
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        cache: gradle
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+    - name: Build with Gradle
+      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+      with:
+        arguments: build
+    - name: healthCheck
+      run: gradle clean build test
