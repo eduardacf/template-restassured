@@ -13,19 +13,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Checkout
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
+      - run: npm ci
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
 
-    - name: Install pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        run_install: true
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
-        cache: pnpm
-    - name: healthCheck
-      run: gradle clean build test
+      - name: healthCheck
+        run: gradle clean build test
