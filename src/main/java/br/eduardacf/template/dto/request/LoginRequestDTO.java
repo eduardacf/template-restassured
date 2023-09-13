@@ -3,7 +3,6 @@ package br.eduardacf.template.dto.request;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
