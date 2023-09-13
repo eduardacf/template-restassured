@@ -21,7 +21,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Testes de HealthCheck
-        run: ./gradlew test "br.eduardacf.template.heathcheck.*"
+        run: ./gradlew test "br.eduardacf.template.heathCheck.*"
 
       - name: Testes de Contrato
         run: ./gradlew test "br.eduardacf.template.contrato.*"
