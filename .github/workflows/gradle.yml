@@ -11,21 +11,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Install JDK 20
+      - name: Install JDK 20 💡
         uses: actions/setup-java@v2
         with:
           java-version: '20'
           distribution: 'adopt'
 
-      - name: Permissão para gradlew
+      - name: Permissão para gradlew ♻️
         run: chmod +x gradlew
 
-      - name: Testes de HealthCheck
+      - name: Testes de HealthCheck 🌏
         run: gradle test --tests -i "br.eduardacf.template.heathCheck.*"
 
-      - name: Testes de Contrato
+      - name: Testes de Contrato 📝
         run: gradle test --tests -i "br.eduardacf.template.contrato.*"
 
-      - name: Testes Funcionais
+      - name: Testes Funcionais 🔧
         run: gradle test --tests -i "br.eduardacf.template.funcional.*"
 
