@@ -1,5 +1,4 @@
-name: Setup Job
-
+name: Java CI with Gradle
 on:
   push:
     branches: [ main ]
@@ -11,15 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 20
-      uses: actions/setup-java@v2
-      with:
-        java-version: '20'
-        distribution: 'adopt'
-        
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      
-    - name: check main
-      run: ./gradlew test
+      - uses: actions/checkout@v2
+      - name: Install JDK 20
+        uses: actions/setup-java@v2
+        with:
+          java-version: '20'
+          distribution: 'adopt'
+
+      - name: Permissão para gradlew
+        run: chmod +x gradlew
+
+      - name: Testes de HealthCheck
+        run: ./gradlew test "br.eduardacf.template.heathcheck.*"
+
+      - name: Testes de Contrato
+        run: ./gradlew test "br.eduardacf.template.contrato.*"
+
+      - name: Testes Funcionais
+        run: ./gradlew test "br.eduardacf.template.funcional.*"
+
