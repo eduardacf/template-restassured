@@ -17,7 +17,7 @@ jobs:
           java-version: '20'
           distribution: 'adopt'
 
-      - name: Permissão para gradlew ♻️
+      - name: Permissão gradlew ♻️
         run: chmod +x gradlew
 
       - name: Testes de HealthCheck 🌏
